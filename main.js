@@ -1,19 +1,19 @@
-import express from "express";
-import dotenv from "dotenv";
+const express = require("express");
+const dotenv = require ("dotenv");
 
 //load config
 dotenv.config({ path: './config/config.env' });
 
 
 //run server
-const main = express();
+const MAIN = express();
 const PORT = process.env.PORT;
-main.listen(PORT, console.log(`Application running at port ${PORT} (localhost)`));
+MAIN.listen(PORT, console.log(`Application running in ${process.env.NODE_ENV} at port ${PORT} (localhost)`));
 
-main.get('/', (req, resp) => {
-    resp.send ('Hi bitches!');
+MAIN.get('/', (req, resp) => {
+    resp.send ('HOME');
 });
 
-main.get('/user', (req, resp) => {
-    resp.send ('U bitch U!!');
+MAIN.get('/user', (req, resp) => {
+    resp.send ('USER');
 });
