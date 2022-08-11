@@ -1,9 +1,34 @@
+import { Sequelize } from "sequelize";
+import dotenv from 'dotenv';
+import sequelize from "sequelize";
+
+
+//load config
+
+dotenv.config({path: './config/config.env'});
+
+const conn = new Sequelize(
+  process.env.MYSQL_DATABASE,
+  process.env.MYSQL_USER,
+  process.env.MYSQL_PASSWORD,
+  {
+    dialect: 'mysql',
+    host: process.env.MYSQL_HOST
+  }
+);
+
+export default conn;
+
+
+
+
 // MYSQL
-var mysql      = require('mysql');
+/*import mysql from 'mysql';
+
 var connection = mysql.createConnection({
   host     : 'localhost',
-  user     : 'root',
-  password : 'dev142021',
+  user     : 'foodreview',
+  password : 'foodreview',
   database : 'foodreview'
 });
  
@@ -18,7 +43,7 @@ connection.end();
 
 
 // POSTGRESQL
-/*const { Client } = require('pg')
+const { Client } = require('pg')
 const client = new Client()
 client.connect()
 client.query('SELECT $1::text as message', ['Hello world!'], (err, res) => {
