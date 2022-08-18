@@ -1,4 +1,4 @@
-import { Sequelize, DataTypes } from 'sequelize';
+import Sequelize from 'sequelize';
 import conn from '../config/db.js';
 
 const Restaurant = conn.define('restaurant', {
