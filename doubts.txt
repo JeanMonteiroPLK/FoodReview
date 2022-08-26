@@ -1,0 +1,27 @@
+1 - Existe algo parecido com @GeneratedValue para SQL? (AUTO, IDENTIDY, SEQUENCE, etc...)
+R: Sim. Validar com André.
+
+2 - Qual a relação entre ORM e DAO?
+R: ORM são libs ou frameworks para integrar POO e armazenamento relacional (tabelas e afins) enquanto DAO é pattern determina uma classe
+específica para comunicação e manipulação da DB através de métodos próprios
+
+3 - A migração não ficaria dentro do /dist ?
+R: Idealmente, não. Migração não precisa ser executada a cada novo run do projeto. Qualquer edição posterior, é mais prática ser feita 
+manualmente (para a maioria dos casos)
+
+4 - Um objeto modelo (entidade do negócio) tem atributo declarado para chave estrangeira (quando existir)?
+R: Sim. Verificar modo de declaração.
+
+5 - Cada entidade (modelo) ter seu próprio JS é padrão (boa prática) ou escolha particular?
+R: É boa prática pelo S do S.O.L.I.D. enquanto manutenção da aplicação
+
+6 - Como fazer a hospedagem do servidor a ser compartilhado pelo time?
+R: Heroku
+
+7 - Diretório 'routes' seria o equivalente a 'Controller' (package) do MVC?
+R: +/-
+
+8 - Como retornar null do 'savedUser'?
+R: Nem precisa, a validação já garante o teste.
+
+9 - hash também usado na geração de id importante.

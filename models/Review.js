@@ -1,8 +1,7 @@
 import Sequelize from "sequelize";
 import connection from "../config/db.js";
 
-const Review = connection.define(
-    'review',
+const Review = connection.define('review',
     {
         id: {
             type: Sequelize.INTEGER,
